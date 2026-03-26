@@ -1,36 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KNEWY</title>
-    <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="/styles/roadmap.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React roadmap — KNEWY</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/roadmap.css" />
+  </head>
+  <body class="with-site-chrome">
+    <div class="body-bg" aria-hidden="true"></div>
+    <div id="root">
+      <div id="head-container"></div>
+      <div id="body" class="roadmap-page">
+        <span id="topic">react</span>
 
-	<div id="root">
-		<div id="head-container"></div>
-		<div id="body">
-            <span id="topic">react</span>
-            Progress Bar
-			<br><br><br>
-            <div id="roadmap-dashboard">
-                <span id="new-session">New Session</span>
-                <span id="my-progress">My Progress</span>
-                <span id="clear-progress">Clear Progress</span>
+        <header class="roadmap-hero">
+          <h1>React roadmap</h1>
+          <p>
+            Check off each step when you are done with it. Your completion percentage updates
+            smoothly. Clear progress anytime to begin again.
+          </p>
+        </header>
+
+        <div class="roadmap-toolbar">
+          <div class="roadmap-progress-wrap">
+            <div class="roadmap-progress-label">
+              <span>Your progress</span>
+              <strong><span id="progress-count">0</span> / <span id="progress-total">0</span></strong>
             </div>
-			<br><br>
-			<div id="roadmap-nodes-container"></div>
-            <img src="https://roadmap.sh/roadmaps/react.png" alt="React JS Roadmap">
-		</div>
-		<div id="foot-container"></div>
-	</div>
+            <div
+              id="roadmap-progress-bar"
+              role="progressbar"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+              aria-label="Roadmap completion"
+            >
+              <div id="progress-fill"></div>
+            </div>
+          </div>
+          <div class="roadmap-actions">
+            <button type="button" id="find-next" class="btn-roadmap">Next incomplete</button>
+            <button type="button" id="clear-progress" class="btn-roadmap">Clear progress</button>
+          </div>
+        </div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="/scripts/index.js"></script>
+        <div id="roadmap-nodes-container"></div>
+
+        <figure class="roadmap-diagram">
+          <img
+            src="https://roadmap.sh/roadmaps/react.png"
+            alt="Overview diagram of the React developer roadmap"
+          />
+        </figure>
+      </div>
+      <div id="foot-container"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/scripts/index.js"></script>
     <script src="/scripts/topics/reactroadmap.js"></script>
     <script src="/scripts/roadmap.js"></script>
-</body>
+  </body>
 </html>

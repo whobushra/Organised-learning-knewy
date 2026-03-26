@@ -1,6 +1,4 @@
-const nodes_container = document.getElementById('roadmap-nodes-container');
-
-const roadmap = [
+var roadmap = [
     {
         heading:'HTML & CSS basics',
         content:'Cover HTML & CSS basics for webpage structure and design.',

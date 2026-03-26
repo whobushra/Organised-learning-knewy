@@ -1,6 +1,4 @@
-const nodes_container = document.getElementById('roadmap-nodes-container');
-
-const roadmap = [
+var roadmap = [
     {
         heading:'HTML 5',
         content:'Learn Hyper Text Markup Language that sits at the base of every webpage. Bone structure of every webpage.',

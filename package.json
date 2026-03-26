@@ -1,0 +1,9 @@
+{
+  "name": "organised-learning-knewy",
+  "private": true,
+  "description": "Static KNEWY learning site — serve from repo root so /scripts and /components paths resolve.",
+  "scripts": {
+    "start": "npx --yes serve -l 3000 .",
+    "serve": "npx --yes serve -l 3000 ."
+  }
+}

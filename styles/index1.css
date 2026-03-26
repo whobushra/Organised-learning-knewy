@@ -1,310 +1,205 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Nunito:wght@300&family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cabin&family=IM+Fell+English+SC&family=Lobster&family=Londrina+Solid:wght@100;300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+@import url("site.css");
+
+/* Home hero (index.html) */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 1.75rem) var(--site-pad-x) clamp(2rem, 5vw, 4.5rem);
+  min-height: calc(100vh - var(--header-h) - 2rem);
 }
-/* laptop */
-@media screen and (min-width:601px) {
-    
 
- body {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
+.hero-visual {
+  position: relative;
+  order: 0;
 }
-header{
-    display: flex;
-    align-items: center;
-    background-color: #8a2be2;
-    width: 100vw;
 
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: -8% -5%;
+  background: linear-gradient(135deg, rgba(59, 91, 219, 0.2), rgba(124, 58, 237, 0.15));
+  border-radius: 32px;
+  z-index: -1;
+  filter: blur(2px);
 }
-h1{
-    display: flex;
-    flex: 2;
-    padding: 10px 15px 10px 20px;
-    font-family: 'Balsamiq Sans', cursive;
+
+.hero-visual img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius, 20px);
+  box-shadow: 0 32px 80px rgba(59, 91, 219, 0.15);
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(59, 91, 219, 0.1);
+  border-radius: 999px;
+  border: 1px solid rgba(59, 91, 219, 0.15);
+}
+
+.hero-badge svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.9;
+}
+
+.hero-copy h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3.15rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.hero-copy .gradient-text {
+  background: linear-gradient(135deg, var(--primary), #7c3aed, var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-copy .lead {
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 32rem;
+  margin-bottom: 1.75rem;
+}
+
+.hero-copy .quote {
+  font-size: 1rem;
+  font-style: italic;
+  color: #6b7288;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent);
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--primary), #6366f1);
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 12px 32px rgba(59, 91, 219, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(59, 91, 219, 0.4);
+  color: #fff;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--card);
+  border: 1px solid rgba(18, 24, 38, 0.08);
+  border-radius: 999px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-ghost:hover {
+  background: #fff;
+  border-color: rgba(59, 91, 219, 0.25);
+  color: var(--primary);
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(18, 24, 38, 0.06);
+}
+
+.stat {
+  min-width: 5rem;
+}
+
+.stat strong {
+  display: block;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.stat span {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+@media screen and (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
     text-align: center;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 40px;
-    color: whitesmoke;
+    min-height: auto;
+  }
 
-}
-nav{
-    display: flex;
+  .hero-copy .lead,
+  .hero-copy .quote {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-copy .quote {
+    text-align: left;
+    max-width: 28rem;
+  }
+
+  .hero-actions {
     justify-content: center;
-    text-align: center;
-    align-items: center;
-    padding-right: 15px;
+  }
 
-
-}
-ul{
-    display: flex;
-    flex: 2;
-    justify-content: flex-end;
-}
-ul li{
-    display: flex;
-    justify-content: space-between;  
-}
-ul li a{
-    color: whitesmoke;
-    font-size: 20px;
-    font-family:'Nunito', sans-serif ;
-    padding:8px 12px;
-}
-ul li a:link{
-    color: whitesmoke;
-
-}
-ul li a:visited{
-    color: whitesmoke;
-
-}
-ul li a:hover{
-    background-color:  whitesmoke;
-    color:#8a2be2;
-    border-radius: 25px;
-
-
-}
-.content{
-    display: flex;
-    flex: 2;
+  .hero-stats {
     justify-content: center;
-    align-items: center;
-}
-.image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.image img{
-    height: 400px;
-    width: 600px;
-}
-.text{
-    display: flex;
-    flex: 2;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px;
-}
-.btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-    
-}
+  }
 
-.btn a{
-    font-size: 20px;
-    padding: 10px;
-    font-family:'Nunito', sans-serif;
-    color: #49306B;
-    border: 1px solid #49306B;
-    border-radius: 45px;
-
+  .hero-visual {
+    order: -1;
+  }
 }
-.btn a:link{
-    color: #49306B;
-
-}
-.btn a:visited{
-    color: #49306B;
-
-}
-.btn a:hover{
-    background-color: #49306B;
-    color: whitesmoke;
-    border:none;
-
-}
-
-h3{
-    font-family: 'Oswald', sans-serif;
-    color: #49306B;
-    letter-spacing: 1px;
-    font-size: 40px;
-}
-h5{
-    font-family: 'Nunito', sans-serif;
-    color: #635380ad;
-    font-size: 25px;
-}
-p{
-    font-family: 'Patrick Hand', cursive;
-    color: #90708C;
-    font-size: 25px;
-    letter-spacing: 0.5px;
-
-}  
-}
-
-
-/* mobile */
-@media screen and (max-width:600px){
-
-    body {
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    
-    }
-    header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #8a2be2;
-        width: 100vw;
-    
-    }
-    h1{
-        display: flex;
-        flex: 2;
-        padding: 15px 10px 0px 10px ;
-        font-family: 'Balsamiq Sans', cursive;
-        text-align: center;
-        align-items: center;
-        justify-content: flex-start;
-        font-size: 40px;
-        color: whitesmoke;
-    
-    }
-    nav{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        padding-bottom: 5px;
-        width: 100vw;
-    
-    
-    }
-    ul{
-        display: flex;
-        flex: 2;
-        justify-content: center;
-    }
-    ul li{
-        display: flex;
-        justify-content: space-between;  
-    }
-    ul li a{
-        color: whitesmoke;
-        font-size: 20px;
-        font-family:'Nunito', sans-serif ;
-        padding:8px 12px;
-    }
-    ul li a:link{
-        color: whitesmoke;
-    
-    }
-    ul li a:visited{
-        color: whitesmoke;
-    
-    }
-    ul li a:hover{
-        background-color:  whitesmoke;
-        color:#8a2be2;
-        border-radius: 25px;
-    }
-    .content{
-        display: flex;
-        flex-direction: column;
-        flex: 2;
-        justify-content: center;
-        align-items: center;
-    }
-    .image{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .image img{
-        padding: 15px;
-        width: 100vw;
-    }
-    .text{
-        display: flex;
-        flex: 2;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 30px;
-    }
-    .btn{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 20px;
-        
-    }
-    
-    .btn a{
-        font-size: 20px;
-        padding: 10px;
-        font-family:'Nunito', sans-serif;
-        color: #49306B;
-        border: 1px solid #49306B;
-        border-radius: 45px;
-    
-    }
-    .btn a:link{
-        color: #49306B;
-    
-    }
-    .btn a:visited{
-        color: #49306B;
-    
-    }
-    .btn a:hover{
-        background-color: #49306B;
-        color: whitesmoke;
-        border:none;
-    
-    }
-    h3{
-        font-family: 'Oswald', sans-serif;
-        color: #49306B;
-        letter-spacing: 1px;
-        font-size: 40px;
-    }
-    h5{
-        font-family: 'Nunito', sans-serif;
-        color: #635380ad;
-        font-size: 25px;
-    }
-    p{
-        font-family: 'Patrick Hand', cursive;
-        color: #90708C;
-        font-size: 25px;
-        letter-spacing: 0.5px;
-    
-    }  
-}
-

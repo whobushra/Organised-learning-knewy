@@ -1,36 +1,64 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/styles/login.css">
-
-    <title>Login Form</title>
-</head>
-<body>
-    <div class="container">
-        <p class="login-text">Login with social media</p>
-        <div class="login-social">
-            <a href="#" class="facebook"><i class="fa fa-facebook"></i> Facebook</a>
-            <a href="#" class="twitter"><i class="fa fa-twitter"></i> Twitter</a>
-            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i> Google
- Plus</a>
-            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i> Linkedin</a>
-        </div>
-        <form class="login-email">
-            <p class="login-text">Login with email</p>
-            <div class="input-group">
-                <input type="email" placeholder="Email" required>
-            </div>
-            <div class="input-group">
-                <input type="password" placeholder="Password" required>
-            </div>
-            <div class="input-group">
-                <button class="btn">Login</button>
-            </div>
-        </form>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login — KNEWY</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles/login.css" />
+  </head>
+  <body>
+    <div class="login-bg" aria-hidden="true"></div>
+    <div class="login-orbs" aria-hidden="true">
+      <span class="orb orb-a"></span>
+      <span class="orb orb-b"></span>
     </div>
-</body>
+
+    <main class="login-shell">
+      <a class="back-home" href="../index.html">← Back to home</a>
+
+      <div class="login-card" role="region" aria-labelledby="login-title">
+        <div class="login-brand">
+          <span class="logo-mark">K</span>
+          <span class="logo-text">KNE<span>WY</span></span>
+        </div>
+
+        <div class="soon-badge">
+          <span class="soon-dot" aria-hidden="true"></span>
+          Coming soon
+        </div>
+
+        <h1 id="login-title">Account login</h1>
+        <p class="soon-message">
+          Secure sign-in with email and social accounts is <strong>on the way</strong>. We’re building
+          a polished authentication experience—stay tuned for the launch.
+        </p>
+
+        <div class="preview-label">Preview — not active yet</div>
+
+        <form class="login-form" aria-hidden="true" inert>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" placeholder="you@example.com" disabled tabindex="-1" />
+          </label>
+          <label class="field">
+            <span>Password</span>
+            <input type="password" placeholder="••••••••" disabled tabindex="-1" />
+          </label>
+          <button type="button" class="btn-disabled" disabled>Sign in</button>
+        </form>
+
+        <p class="fine-print">
+          You’ll be notified when accounts go live. Until then, explore courses and resources as a
+          guest—no login required.
+        </p>
+
+        <div class="login-links">
+          <a href="../index2.html">Browse courses</a>
+          <span class="dot">·</span>
+          <a href="feedback.html">Send feedback</a>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

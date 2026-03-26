@@ -1,28 +1,33 @@
-html{
-    scroll-behavior: smooth;
+@import url("site.css");
+
+html {
+  scroll-behavior: smooth;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
 }
 
-a{
-    text-decoration: none;
-    outline: none;
-    color: inherit;
+:root {
+  --head-height: 100px;
 }
 
-:root{
-    --head-height: 100px;
+/* Topic / roadmap pages: same background as rest of site */
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: var(--ink);
 }
 
-#root > div{
-    width: 100%;
-    justify-content: center;
-    text-align: center;
+#root > div {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
 }
 
-#body{
-    min-height: 100vh;
+#body {
+  min-height: 100vh;
 }

@@ -1,6 +1,4 @@
-const nodes_container = document.getElementById('roadmap-nodes-container');
-
-const roadmap = [
+var roadmap = [
     {
         heading:'Programming Basics',
         content:'Learn Programming basics in Python Language',

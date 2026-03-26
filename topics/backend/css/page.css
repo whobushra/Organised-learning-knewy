@@ -1,0 +1,10 @@
+/* Shared layout for topic video pages */
+.root {
+  min-height: 100vh;
+}
+
+.body {
+  padding: 1rem 1.5rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}

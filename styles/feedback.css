@@ -1,0 +1,16 @@
+:root {
+  --bs-primary: #3b5bdb;
+  --bs-primary-rgb: 59, 91, 219;
+}
+
+.feedback-page .feedback-form {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 2rem 2rem 2.25rem;
+  border-radius: 20px;
+}
+
+.feedback-intro h1 {
+  font-family: "Outfit", "DM Sans", sans-serif;
+  letter-spacing: -0.02em;
+}

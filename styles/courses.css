@@ -1,0 +1,83 @@
+/* Courses hub (index2) — Bootstrap + KNEWY theme */
+:root {
+  --bs-primary: #3b5bdb;
+  --bs-primary-rgb: 59, 91, 219;
+}
+
+.site-main.courses-page {
+  padding-bottom: 2rem;
+}
+
+.courses-hero {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 255, 0.98));
+  border: 1px solid rgba(59, 91, 219, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(18, 24, 38, 0.06);
+}
+
+.courses-hero h1 {
+  font-family: "Outfit", "DM Sans", sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.courses-hero .lead {
+  color: var(--muted, #5c6478);
+  line-height: 1.65;
+}
+
+.courses-hero .btn-primary {
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: 0 10px 28px rgba(59, 91, 219, 0.35);
+}
+
+.courses-grid .card-topic {
+  border-radius: 20px;
+  border: 1px solid rgba(18, 24, 38, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.courses-grid .card-topic:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px rgba(18, 24, 38, 0.1);
+}
+
+.courses-grid .card-topic h2 {
+  font-family: "Outfit", "DM Sans", sans-serif;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.courses-grid .card-topic p {
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.courses-grid .btn-group-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.courses-grid .btn {
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.45rem 1rem;
+}
+
+.courses-grid .bg-dark .btn-outline-light:hover {
+  background: #fff;
+  color: #121826;
+}
+
+@media (max-width: 767px) {
+  .courses-hero {
+    padding: 1.75rem 1.25rem;
+  }
+}
