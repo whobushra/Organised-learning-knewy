@@ -44,10 +44,11 @@ function setActiveNav() {
 }
 
 $(function () {
-  $("#head-container").load("/components/header.html", function () {
+  var base = (window.__SITE_BASE__ || "/").replace(/\/?$/, "/");
+  $("#head-container").load(base + "components/header.html", function () {
     setActiveNav();
   });
-  $("#foot-container").load("/components/footer.html");
+  $("#foot-container").load(base + "components/footer.html");
 
   var link = document.querySelector("link[rel~='icon']");
   if (!link) {
@@ -55,5 +56,5 @@ $(function () {
     link.rel = "icon";
     document.getElementsByTagName("head")[0].appendChild(link);
   }
-  link.href = "/favicon.svg";
+  link.href = base + "favicon.svg";
 });
